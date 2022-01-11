@@ -1,0 +1,119 @@
+.card-container {
+    display           : grid;
+    grid-template-rows: 1fr 1fr;
+    margin            : 0 auto;
+    margin-top        : 300px;
+    width             : 400px;
+    height            : 700px;
+    border-radius     : 15px;
+    background-color  : var(--very-dark-blue-card-bg);
+    box-shadow        : 0 0 25px var(--very-dark-blue-main-bg), 0 0 25px var(--very-dark-blue-card-bg);
+}
+
+.card-img {
+    padding   : 25px;
+    /* display: grid; */
+}
+
+.card-img img {
+    /* grid-area    : 1/-1; */
+    border-radius: 15px;
+    cursor       : pointer;
+}
+
+/*
+#icone-view{
+    grid-area : 1/1;
+    place-self: center;
+    margin-top: 20px;
+    background: var(--cor-12);
+    display   : inline-block;
+    padding   : 8px 16px 8px 8px;
+} */
+
+.card-content {
+    padding: 0 30px 30px 30px;
+}
+
+.card-content h1 {
+    color         : var(--color-white);
+    font-weight   : 600;
+    padding-bottom: 20px;
+    cursor        : pointer;
+}
+
+.card-content h1:hover {
+    color: var(--color-cyan);
+}
+
+.card-content>p {
+    color         : var(--color-soft-blue);
+    padding-bottom: 30px;
+}
+
+.card-content ul {
+    display              : grid;
+    grid-template-columns: auto auto;
+    padding-left         : 0px;
+    padding-bottom       : 30px;
+}
+
+.card-content ul::after {
+    content         : "";
+    display         : inline-block;
+    width           : 320%;
+    height          : 1px;
+    margin-top      : 30px;
+    background-color: var(--very-dark--blue-line);
+}
+
+.card-content li {
+    display    : flex;
+    gap        : 10px;
+    align-items: center;
+    cursor     : pointer;
+}
+
+.card-content li+li {
+    padding-left: 120px;
+}
+
+.card-content li span {
+    color      : var(--color-cyan);
+    font-weight: 600;
+}
+
+.card-content li p {
+    color      : var(--color-soft-blue);
+    font-weight: 400;
+}
+
+.card-footer {
+    display              : grid;
+    grid-template-columns: auto 1fr;
+    gap                  : 20px;
+    justify-content      : center;
+    align-items          : center;
+}
+
+.card-footer img {
+    width        : 32px;
+    border       : 1px solid var(--color-white);
+    border-radius: 50%;
+    cursor       : pointer;
+}
+
+.card-footer p {
+    padding-bottom: 0px;
+    color         : var(--color-soft-blue);
+}
+
+.card-footer span {
+    color      : var(--color-white);
+    font-weight: 600;
+    cursor     : pointer;
+}
+
+.card-footer span:hover {
+    color: var(--color-cyan);
+}

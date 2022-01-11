@@ -1,0 +1,243 @@
+:root {
+    --cor-primaria       : #e21;
+    --cor-primaria-escura: #900;
+    --fundo-1            : #f7f7f7;
+    --fundo-2            : #fff;
+    --texto              : #000;
+    --onda               : url("./img/onda-clara.svg");
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --fundo-1  : #111;
+        --fundo-2  : #000;
+        --texto    : #fff;
+        --subtitulo: rgba(255, 255, 255, 0.2);
+        --onda     : url("./img/onda-escura.svg");
+    }
+}
+
+/* ESTILOS GERAIS */
+
+body {
+    font-family  : Arial, Helvetica, sans-serif;
+    margin       : 0px;
+    background   : var(--fundo-1);
+    display      : grid;
+    gap          : 3.75rem;
+    justify-items: center;
+    margin-top   : 3.75rem;
+    color        : var(--texto);
+}
+
+header {
+    margin       : 0px;
+    display      : grid;
+    justify-items: center;
+    gap          : 3.75rem;
+}
+
+img {
+    max-width: 100%;
+    display  : block;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0px;
+}
+
+p {
+    font-size  : 1.25rem;
+    line-height: 1.3;
+    /* altura de linhas */
+}
+
+/* ESTILIZAÇÃO PERSONALIZADA  */
+.menu {
+    display        : flex;
+    flex-wrap      : wrap;
+    gap            : 1.25rem;
+    justify-content: center;
+}
+
+.menu a {
+    background    : var(--fundo-2);
+    padding       : 1rem 2rem;
+    border-radius : 4px;
+    color         : var(--texto);
+    text-transform: uppercase;
+    /* transforma texto em letra maiúscula */
+    border        : 2px solid var(--fundo-2);
+    /* acrescenta borda branca p/ não quebrar o css ao utilizar o hover */
+}
+
+.menu a:hover {
+    border-color: var(--cor-primaria);
+}
+
+.conteudo {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    max-width            : 1000px;
+}
+
+.introducao {
+    background   : var(--fundo-2);
+    padding      : 1.90rem;
+    text-align   : right;
+    position     : relative;
+    display      : grid;
+    gap          : 1.25rem;
+    align-content: center;
+    justify-items: end;
+}
+
+.introducao h1 {
+    font-size: 2rem;
+}
+
+.introducao a:hover {
+    background: var(--cor-primaria-escura);
+}
+
+.introducao::before {
+    content   : "";
+    width     : 60px;
+    height    : 4px;
+    background: var(--cor-primaria);
+    position  : absolute;
+    top       : 30px;
+    right     : -30px;
+}
+
+.introducao-cover img {
+    object-fit: cover;
+    height    : 100%;
+}
+
+.botao {
+    background    : var(--cor-primaria);
+    color         : #fff;
+    padding       : 1rem 2rem;
+    border-radius : 4px;
+    text-transform: uppercase;
+}
+
+
+.subtitulo {
+    background-image   : var(--onda);
+    font-size          : 4rem;
+    text-transform     : uppercase;
+    color              : var(--subtitulo);
+    text-align         : right;
+    padding            : 2.5rem;
+    align-self         : center;
+    /* word-break      : break-all; */
+}
+
+.vantagens {
+    background: var(--fundo-2);
+    padding   : 2.5rem;
+}
+
+.vantagens-item {
+    display              : grid;
+    grid-template-columns: auto 1fr;
+    gap                  : 10px 20px;
+    padding              : 20px;
+}
+
+.vantagens-item:hover {
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.vantagens-item:nth-child(odd) {
+    background: var(--fundo-1);
+}
+
+.vantagens-item p {
+    grid-column: 2;
+}
+
+.rodape {
+    box-sizing: border-box;
+    width     : 100vw;
+    text-align: center;
+    padding   : 1.25rem;
+    background: var(--fundo-2);
+}
+
+@media (min-width: 451px) and (max-width: 970px) {
+    html {
+        padding: 1rem;
+        margin : 0 auto;
+    }
+
+    .introducao {
+        display              : grid;
+        grid-template-columns: 1fr;
+        justify-items        : center;
+    }
+
+    .introducao h1,
+    p {
+        text-align: center;
+    }
+
+    .conteudo-vantagem {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo-vantagem h2 {
+        text-align: center;
+    }
+
+    .vantagens-item p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 450px) {
+
+    html {
+        padding: 1rem;
+        margin : 0 auto;
+    }
+
+    .introducao {
+        display              : grid;
+        grid-template-columns: 1fr;
+        justify-items        : center;
+    }
+
+    .introducao p {
+        text-align: center;
+    }
+
+    article #bicicleta {
+        grid-row: 1;
+    }
+
+    .introducao::before {
+        display: none;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo h2 {
+        text-align: center;
+    }
+
+    .rodape {
+        width: 100%;
+    }
+}
