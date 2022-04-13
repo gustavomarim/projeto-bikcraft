@@ -1,13 +1,10 @@
-# TÍTULO DO PROJETO
+# BIKCRAFT
 
 ## Tabela de conteúdos
 
 - [Visão Geral](#visão-geral)
-  - [O Desafio](#o-desafio)
-    - [Problema](#problema)
     - [Objetivo](#objetivo)
-    - [Funcionalidades Pedidas](#funcionalidades-pedidas)
-    - [Funcionalidades Extras](#funcionalidades-extras)
+    - [Funcionalidades](#funcionalidades)
   - [Captura de Tela](#captura-de-tela)
   - [Links](#links)
 - [O meu processo](#o-meu-processo)
@@ -18,40 +15,31 @@
 
 ## Visão geral
 
-### O desafio
-
-### Problema
-
-Descrição do problema 
-
-<br><br>
-
 ### Objetivo
 
-Descrição do objetivo
+Projeto desenvolvido durante o curso de [HTML e CSS para Iniciantes](https://www.origamid.com/curso/html-e-css-para-iniciantes/) da plataforma de ensino [Origamid](https://www.origamid.com) com o intuito de colocar em prática os conceitos e boas práticas de desenvolvimento utilizando HTML semântico e CSS.
 
 ---
 
-### Funcionalidades Pedidas
+### Funcionalidades
 
-- [x] Check-list de funcionalidades
-
-### Funcionalidades Extras
-
-- [x] Check-list de funcionalidades extras (se houver)
+- [x] Responsivo
+- [x] Animação de botões
+- [x] Animação de elementos
+- [x] Animação de Cards
 
 <br>
 
 ### Captura de Tela
 
-![]()
+![](./img/screen-bikcraft.png)
 
 <br>
 
 ### Links
 
-- URL da solução: [-](-)
-- Deploy: [-](-)
+- URL da solução: [Repositório Github](https://github.com/gustavomarim/projeto-bikcraft)
+- Link do projeto online: [Github Pages](https://gustavomarim.github.io/projeto-bikcraft/)
 
 <br>
 
@@ -59,38 +47,44 @@ Descrição do objetivo
 
 #### Construído com:
 
-- TECNOLOGIAS UTILIZADAS
+- HTML 5
+- CSS 3
+- CSS Flex-box
+- CSS Grid-Layout
+- JavaScript
 
 ### O que aprendi
 
-Resumo do que foi aprendido durante o projeto
+Durante este projeto eu pude aprender os conceitos e boas práticas no desenvolvimento de uma aplicação web real, utilizando as ferramentas básicas na 
+construção de um site.
+
+<br>
 
 ## Execução do Projeto
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 ### 🎲 Rodando em localhost
 
 ```bash
 # Clone este repositório
-$ git clone <link do clone do projeto>
+$ git clone <https://github.com/gustavomarim/projeto-bikcraft.git>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd (nome da pasta do projeto)
+$ cd projeto-bikcraft
 
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm start
+# Execute a aplicação em um servidor HTTP Live Server
+# No arquivo 'index.html' execute o comando:
+$ alt+L alt+O
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
 
+<br>
 
 ## Autor
 
